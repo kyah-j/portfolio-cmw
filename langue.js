@@ -6,8 +6,8 @@ var textesEnFrancais = {
 
 var textsInEnglish = {
 "titre1" : "My Portofolio - Kyannah JEANNE",
-"titre2" : "Presentation",
-"p" : " I'm Kyannah, SEO web editor"
+"titre2" : "My presentation",
+"p1" : " I'm Kyannah, SEO web editor"
 };
 
 function changeLanguage(langue){
@@ -24,6 +24,7 @@ document.querySelectorAll("input").forEach(function(input) {
         changeLanguage(e.srcElement.value);
     });
 });
+
 
 
 
