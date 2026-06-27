@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Posters scientifiques – Portfolio Kyannah JEANNE"/>
+  <title>Posters scientifiques – Kyannah JEANNE</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../style.css"/>
+</head>
+<body>
+
+  <nav role="navigation" aria-label="Navigation principale">
+    <a href="../index.html#projets" class="logo">Kyannah JEANNE</a>
+
+    <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="nav-links" role="list">
+      <li><a href="../index.html#apropos" id="nav-apropos">À propos</a></li>
+      <li><a href="../index.html#projets" id="nav-projets">Projets</a></li>
+      <li><a href="../index.html#contact" id="nav-contact">Contact</a></li>
+      <li>
+        <div class="langue-selector" role="group" aria-label="Langue">
+          <input type="radio" id="fr" name="langue" value="français" checked/>
+          <label for="fr">FR</label>
+          <input type="radio" id="en" name="langue" value="english"/>
+          <label for="en">EN</label>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <main id="contenu">
+    <div class="projet-header">
+      <a href="../index.html#projets" class="btn-retour" id="btn-retour">← Retour aux projets</a>
+      <div class="projet-meta"><span class="badge">Affiche</span></div>
+      <h1 class="projet-titre" id="p2-titre">Posters scientifiques</h1>
+       <p class="projet-desc" id="p2-desc">Dans le cadre d’un cours dédié à l’industrie et à la médiation des jeux vidéo, j’ai conçu un poster scientifique centré sur le jeu Spider-Man: Miles Morales.</p>
+    </div>
+    <div class="projet-contenu">
+    <div class="projet-img-col">
+      <div class="projet-img-placeholder" aria-hidden="true">
+        <img src="doc/Affiche_jeuvidéo.jpeg" alt="Poster scientifique Spider-Man Miles Morales et Stardew Valley">
+      </div>
+    </div>
+    <div class="projet-texte-col">
+      <div class="projet-detail">
+        <h3 id="p2-detail">Spider-Man : Miles Morales</h3>
+          <p id="p2-detail-texte">Dans le cadre de ce projet, l'objectif était de concevoir un poster structuré et percutant, destiné à être imprimé au format A3. Pour y parvenir, j'ai suivi une méthodologie en trois temps.<br> J'ai d'abord défini le fond du sujet en posant une problématique claire et en structurant les grandes parties du poster. <br>J'ai ensuite réalisé un story-board pour penser la mise en page, organiser les blocs de texte et harmoniser la trame graphique. <br>Enfin, j'ai veillé à la qualité technique de la réalisation en sélectionnant des visuels de bonne qualité.</p>
+      </div>
+    </div>
+  </div>
+  </main>
+
+  <div class="lightbox-overlay" id="lightbox" role="dialog" aria-modal="true" aria-label="Image agrandie">
+    <button class="lightbox-fermer" id="lightbox-fermer" aria-label="Fermer">×</button>
+    <img id="lightbox-img" src="" alt="" />
+  </div>
+
+  <footer role="contentinfo">
+    <p id="footer-copy">© 2026 Kyannah JEANNE – Tous droits réservés</p>
+    <a href="../index.html#projets" id="btn-retour-footer">← Retour aux projets</a>
+  </footer>
+
+  <script src="../langue.js"></script>
+</body>
+</html>

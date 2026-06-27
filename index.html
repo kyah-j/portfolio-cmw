@@ -1,19 +1,153 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-	<title>Portfolio</title>
-    <link rel="stylesheet" href="style.css"/>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="description" content="Portfolio de Kyannah JEANNE – Rédactrice web SEO/GEO et Chargée de communication digitale." />
+	<title>Kyannah JEANNE – Portfolio</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-    <input type="radio" id="fr" name="langue" value="français" checked>
-    <label for="français" id="">FR</label>
-    <input type="radio" id="en" name="langue" value="english">
-    <label for="english" id="">EN</label>
+  <nav role="navigation" aria-label="Navigation principale">
+    <a href="#splash" class="logo">Kyannah JEANNE</a>
 
-    <h1 id="titre1">Portfolio - Kyannah JEANNE </h1>
-        <h2 id="titre2">Présentation</h2>
-            <p id="p1"> Je m'appelle Kyannah, rédactrice web SEO</p>
+    <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="nav-links" role="list">
+      <li><a href="#apropos" id="nav-apropos">À propos</a></li>
+      <li><a href="#projets" id="nav-projets">Projets</a></li>
+      <li><a href="#contact" id="nav-contact">Contact</a></li>
+      <li>
+        <div class="langue-selector" role="group" aria-label="Langue">
+          <input type="radio" id="fr" name="langue" value="français" checked />
+          <label for="fr">FR</label>
+          <input type="radio" id="en" name="langue" value="english" />
+          <label for="en">EN</label>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <header id="splash" role="banner">
+    <h1 id="splash-titre">Bienvenue sur mon portfolio !</h1>
+      <p id="splash-sous">Swipe pour découvrir</p>
+        <a href="#apropos" class="fleche-bas" aria-label="Défiler vers le contenu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </a>
+  </header>
+   
+  <section id="apropos" aria-labelledby="apropos-titre">
+      <div class="apropos-texte">
+        <h2 class="section-titre" id="apropos-titre">À propos <span>de moi</span></h2>
+          <p id="apropos-p1">Diplômée d'une <strong>Licence Information-Communication</strong>, j'évolue en tant que <strong>rédactrice web SEO/GEO</strong> et <strong>chargée de communication digitale</strong>. <br> Mon parcours m'a permis d'acquérir une solide maîtrise de la stratégie et de la création de contenu. Passionnée par l'évolution du web, j'ai développé une expertise pointue en rédaction SEO ainsi qu'en GEO, afin de répondre aux nouvelles exigences des moteurs de recherche génératifs. <br>  Polyvalente, je sais lier la vision stratégique d'un projet de communication aux aspects plus techniques de sa mise en œuvre (outils d'IA, notions de code, visuels).</p>
+      </div>
+  </section>
+
+  <section id="projets" aria-labelledby="projets-titre">
+    <div class="projets-wrap">
+      <h2 class="section-titre" id="projets-titre">Mes <span>projets</span></h2>
+        <p class="section-sous" id="projets-sous">Découvrez mes réalisations universitaires, professionnelles et personnelles !</p>
+
+        <div class="filtres" role="group" aria-label="Filtrer les projets">
+          <button class="actif" id="filtre-tous"  onclick="filtrer('tous', this)">Tous</button>
+          <button id="filtre-red"   onclick="filtrer('redaction', this)">Rédaction</button>
+          <button id="filtre-print" onclick="filtrer('print', this)">Print</button>
+          <button id="filtre-video" onclick="filtrer('video', this)">Vidéo</button>
+          <button id="filtre-rs"    onclick="filtrer('rs', this)">Réseaux sociaux</button>
+        </div>
+
+        <div class="grille" role="list">
+          <a class="carte" href="projets/darty.html" data-cat="redaction" role="listitem" aria-label="Articles Darty">
+            <div class="carte-img" aria-hidden="true">
+              <img src="projets/doc/dartyetvous.jpeg" alt="">
+            </div>
+            <div class="carte-info">
+              <span class="badge">Rédaction</span>
+              <h3 id="c1-titre">Articles Darty & Vous</h3>
+                <p id="c1-desc">Rédaction et optimisation d'articles SEO/GEO pour le blog Darty & Vous</p>
+                <span class="voir-plus">Voir le projet →</span>
+            </div>
+          </a>
+
+          <a class="carte" href="projets/posters.html" data-cat="print" role="listitem" aria-label="Posters scientifiques">
+            <div class="carte-img" aria-hidden="true">
+              <img src="projets/doc/Marvel's_Spider-Man_Miles_Morales_Logo.jpeg" alt="">
+            </div>
+            <div class="carte-info">
+              <span class="badge">Affiche</span>
+              <h3 id="c2-titre">Poster scientifique</h3>
+                <p id="c2-desc">Réalisation d'un poster scientifique sur le jeu vidéo Spider-Man : Miles Morales</p>
+                <span class="voir-plus">Voir le projet →</span>
+            </div>
+          </a>
+
+          <a class="carte" href="projets/video.html" data-cat="video" role="listitem" aria-label="Montages vidéo">
+            <div class="carte-img" aria-hidden="true">🎥</div>
+            <div class="carte-info">
+              <span class="badge">Vidéo</span>
+              <h3 id="c3-titre">Montages vidéo</h3>
+                <p id="c3-desc">Montage réalisé en stage et dans le cadre de la licence Info-Com</p>
+                <span class="voir-plus">Voir le projet →</span>
+            </div>
+          </a>
+
+          <a class="carte" href="projets/kawa.html" data-cat="rs" role="listitem" aria-label="KAWA x Kinder Bueno">
+            <div class="carte-img" aria-hidden="true">
+              <img src="projets/doc/kawaxkinderbueno.jpeg" alt="">
+            </div>
+            <div class="carte-info">
+              <span class="badge">Réseaux sociaux</span>
+              <h3 id="c4-titre">KAWA x Kinder Bueno</h3>
+                <p id="c4-desc"> Création d'un post Instagram pour une collaboration fictive (projet réalisé en groupe).</p>
+                <span class="voir-plus">Voir le projet →</span>
+            </div>
+          </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" aria-labelledby="contact-titre">
+    <div class="contact-wrap">
+      <h2 class="section-titre" id="contact-titre">Me <span>contacter</span></h2>
+        <p class="section-sous" id="contact-sous">N'hésitez pas à me contacter pour toute opportunité professionnelle.</p>
+      <div class="btns">
+        <a href="mailto:kyannahjeanne@gmail.com" class="btn btn-p">✉️ kyannahjeanne@gmail.com</a>
+        <a href="tel:0769250525" class="btn btn-s">📞 07 69 25 05 25</a>
+      </div>
+    </div>
+  </section>
+
+  <footer role="contentinfo">
+    <p id="footer-copy">© 2026 Kyannah JEANNE – Tous droits réservés</p>
+    <a href="#" id="btn-mentions"><span id="footer-mentions">Mentions légales</span></a>
+  </footer>
+
+  <div class="modale-overlay" id="modale-mentions" role="dialog" aria-modal="true" aria-labelledby="titre-mentions">
+    <div class="modale">
+      <button class="btn-fermer" id="btn-fermer" aria-label="Fermer">×</button>
+      <h2 id="titre-mentions">Mentions légales</h2>
+        <h3>Éditeur</h3>
+          <p>Kyannah JEANNE – Étudiante Master CMW, Université Gustave Eiffel<br>
+      Île-de-France · <a href="mailto:kyannahjeanne@gmail.com">kyannahjeanne@gmail.com</a></p>
+        <h3>Hébergement</h3>
+          <p>GitHub Pages – Microsoft Corporation, One Microsoft Way, Redmond WA 98052, USA<br>
+          <a href="https://pages.github.com" target="_blank" rel="noopener noreferrer">pages.github.com</a></p>
+        <h3>Propriété intellectuelle</h3>
+          <p>Tous les contenus (textes, images, visuels) sont la propriété de Kyannah JEANNE. Toute reproduction sans autorisation est interdite.</p>
+        <h3>Données personnelles</h3>
+          <p>Ce site ne collecte aucune donnée personnelle et n'utilise aucun cookie de traçage.</p>
+        <h3>Crédits</h3>
+          <p>Polices : Google Fonts (Playfair Display, DM Sans). Développement : Kyannah JEANNE.</p>
+    </div>
+  </div>
 
 <script src="langue.js"></script>
 </body>

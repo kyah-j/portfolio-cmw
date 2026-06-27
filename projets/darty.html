@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Articles Darty &amp; Vous – Portfolio Kyannah JEANNE"/>
+  <title>Articles Darty &amp; Vous – Kyannah JEANNE</title>
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../style.css"/>
+</head>
+<body>
+  <nav role="navigation" aria-label="Navigation principale">
+    <a href="../index.html#projets" class="logo">Kyannah JEANNE</a>
+
+    <button class="menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav-links" id="nav-links" role="list">
+      <li><a href="../index.html#apropos" id="nav-apropos">À propos</a></li>
+      <li><a href="../index.html#projets" id="nav-projets">Projets</a></li>
+      <li><a href="../index.html#contact" id="nav-contact">Contact</a></li>
+      <li>
+        <div class="langue-selector" role="group" aria-label="Langue">
+          <input type="radio" id="fr" name="langue" value="français" checked/>
+          <label for="fr">FR</label>
+          <input type="radio" id="en" name="langue" value="english"/>
+          <label for="en">EN</label>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+  <main id="contenu">
+
+    <div class="projet-header">
+      <a href="../index.html#projets" class="btn-retour" id="btn-retour">← Retour aux projets</a>
+      <div class="projet-meta"><span class="badge">Rédaction</span></div>
+      <h1 class="projet-titre" id="p1-titre">Articles Darty &amp; Vous</h1>
+        <p class="projet-desc" id="p1-desc">Pour le média Darty & Vous, mon travail consiste à rédiger et optimiser des articles qui trouvent le parfait équilibre entre intérêt humain et performance technique.</p>
+    </div>
+
+    <div class="projet-contenu">
+      <div class="projet-img-col">
+        <div class="projet-img-placeholder" aria-hidden="true">
+          <img src="doc/dartyetvousprofil.jpeg" alt="Profil Kyannah Jeanne sur Darty et Vous">
+        </div>
+      </div>
+
+      <div class="projet-texte-col">
+        <div class="projet-detail">
+          <h3 id="p1-detail">Missions</h3>
+            <p id="p1-detail-texte">Ma particularité sur ce projet est d'allier le SEO classique à la stratégie GEO (Generative Engine Optimization). Concrètement, j'articule et je structure mes textes pour qu’ils soient aussi bien référencés sur Google que compris et cités par les moteurs de réponse dopés à l'IA (comme ChatGPT ou Gemini).</p>
+        </div>
+        <div class="projet-detail">
+            <a href="https://www.darty.com/darty-et-vous/profil/kyannah" target="_blank" rel="noopener noreferrer" class="btn btn-s">Découvrir mes articles</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer role="contentinfo">
+    <p id="footer-copy">© 2026 Kyannah JEANNE – Tous droits réservés</p>
+    <a href="../index.html#projets" id="btn-retour-footer">← Retour aux projets</a>
+  </footer>
+
+  <div class="lightbox-overlay" id="lightbox" role="dialog" aria-modal="true" aria-label="Image agrandie">
+    <button class="lightbox-fermer" id="lightbox-fermer" aria-label="Fermer">×</button>
+    <img id="lightbox-img" src="" alt="" />
+  </div>
+
+<script src="../langue.js"></script>
+</body>
+</html>
